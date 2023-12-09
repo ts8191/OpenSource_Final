@@ -127,9 +127,7 @@ def solution4(r1, r2):                                                          
 def solution5(numbers):                                                         # 솔루션 5로 이름 변경
     answer = ''                                                                 # answer 문자열을 ''로 초기화
     tmp_list = []                                                               # tmp_list라는 배열 생성
-    for i in range(len(numbers)):                                               # numbers 배열 길이 만큼 반복
-        for j in range(len(numbers)):                                           # numbers 배열 길이 만큼 반복(sort 알고리즘에 따라 가장 큰 O(n)인 n^2로 가정) 
-            numbers.sort(key = cmp_to_key(comp))                                # numbers comp 함수를 키 값으로 정렬 cmp_to_key를 이용하여 사용자 정의 정렬 함수 사용
+    numbers.sort(key = cmp_to_key(comp))                                        # numbers comp 함수를 키 값으로 정렬 cmp_to_key를 이용하여 사용자 정의 정렬 함수 사용
     for i in range(len(numbers)):                                               # numbers 길이 만큼 반복
         answer += str(numbers[i])                                               # answer에 정렬된 numbers를 저장
     return answer                                                               # answer 반환
